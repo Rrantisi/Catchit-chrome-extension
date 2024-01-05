@@ -2,13 +2,7 @@
   "manifest_version": 3, 
   "name": "Catch-it",
   "version": "1.0",
-  "description": "Save your ideas immediately and never lose them again",
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["index.js"]
-    }
-  ],
+  "description": "Effortlessly capture and manage ideas with the Catch-it Chrome Extension, securely storing each inspiration in your browser.",
   "permissions": [
     "storage"
   ],
