@@ -20,6 +20,10 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 h2 {
   color: #196054;
   font-size: 16px;
