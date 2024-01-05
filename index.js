@@ -26,30 +26,32 @@ const displayIdeas = async () => {
   resultContainer.innerHTML = '';
 
   const data = await chrome.storage.local.get("allIdeas");
-  
-  data.allIdeas.map((idea, index)=> {
-    // Creates div element for each list item and button
-    const listItemContainer = document.createElement('div');
-    listItemContainer.className = 'listItemContainer';
 
-    // Creates list item element
-    const listItem = document.createElement('li');
-    listItem.className = 'listItem';
-    listItem.innerHTML = idea;
+  if(data.allIdeas) {
+    data.allIdeas.map((idea, index)=> {
+      // Creates div element for each list item and button
+      const listItemContainer = document.createElement('div');
+      listItemContainer.className = 'listItemContainer';
 
-    // Creates delete button element for each list item
-    const delButton = document.createElement('button');
-    delButton.innerHTML = '<i class="fa-solid fa-eraser"></i>';
-    delButton.className = 'deleteBtn';
-    delButton.addEventListener('click', () => deleteIdea(idea, index));
+      // Creates list item element
+      const listItem = document.createElement('li');
+      listItem.className = 'listItem';
+      listItem.innerHTML = idea;
 
-    // Append listItem element and delButton element to listItemContainer
-    listItemContainer.appendChild(listItem)
-    listItemContainer.appendChild(delButton)
+      // Creates delete button element for each list item
+      const delButton = document.createElement('button');
+      delButton.innerHTML = '<i class="fa-solid fa-eraser"></i>';
+      delButton.className = 'deleteBtn';
+      delButton.addEventListener('click', () => deleteIdea(idea, index));
 
-    // Append listItemContainer to resultContainer
-    resultContainer.appendChild(listItemContainer);
-  })
+      // Append listItem element and delButton element to listItemContainer
+      listItemContainer.appendChild(listItem)
+      listItemContainer.appendChild(delButton)
+
+      // Append listItemContainer to resultContainer
+      resultContainer.appendChild(listItemContainer);
+    })
+  }
 }
 
 // Handle delete idea
