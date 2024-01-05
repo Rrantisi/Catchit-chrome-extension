@@ -33,11 +33,11 @@
 - Delete Unwanted Ideas: Maintain an organized idea repository by removing or deleting entries that no longer align with your vision. Utilize the intuitive delete functionality within the Catch-it extension to streamline your list and focus on your most promising ideas.
 
 
-![MyCookBook](/assets/images/1.png)
+![Catch-it](/images/1.png)
 
-![MyCookBook](/assets/images/2.png)
+![Catch-it](/images/2.png)
 
-![MyCookBook](/assets/images/3.png)
+![Catch-it](/images/3.png)
 
 <a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Aranagraphics - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Canticons - Flaticon</a> 
