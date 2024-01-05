@@ -21,18 +21,33 @@ const saveIdea = () => {
 // Handle DOM manipulation to display ideas
 const displayIdeas = async () => {
   document.body.appendChild(resultContainer);
+  resultContainer.className = 'resultContainer'
   resultContainer.innerHTML = '';
 
   const data = await chrome.storage.local.get("allIdeas");
   
   data.allIdeas.map((idea, index)=> {
+    // Creates div element for each list item and button
+    const listItemContainer = document.createElement('div');
+    listItemContainer.className = 'listItemContainer';
+
+    // Creates list item element
     const listItem = document.createElement('li');
+    listItem.className = 'listItem';
+    listItem.innerHTML = idea;
+
+    // Creates delete button element for each list item
     const delButton = document.createElement('button');
-    delButton.innerHTML = 'delete';
-    delButton.addEventListener('click', () => deleteIdea(idea, index))
-    listItem.innerHTML = idea
-    listItem.appendChild(delButton)
-    resultContainer.appendChild(listItem)
+    delButton.innerHTML = 'X';
+    delButton.className = 'deleteBtn';
+    delButton.addEventListener('click', () => deleteIdea(idea, index));
+
+    // Append listItem element and delButton element to listItemContainer
+    listItemContainer.appendChild(listItem)
+    listItemContainer.appendChild(delButton)
+
+    // Append listItemContainer to resultContainer
+    resultContainer.appendChild(listItemContainer);
   })
 }
 
