@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="/images/idea128.png" alt="Catch-it">
+    <img src="/images/light-bulb128.png" alt="Catch-it">
 </div>
 
 <!-- TABLE OF CONTENTS -->
