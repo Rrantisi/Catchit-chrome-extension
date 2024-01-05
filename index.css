@@ -1,16 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   border: 2px solid #ffffff;
+  padding: 10px;
 }
 
 body {
-  background-color: #ebe7e7;
+  /* background-color: #ebe7e7; */
+  background: linear-gradient(
+        -135deg,
+        #d8d4d4 ,
+        #ffffff 
+    );
   width: 80vh;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 20%;
+  margin: 10px;
 }
 
 #ideaContainer {
@@ -28,6 +40,7 @@ h2 {
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  padding: 10px;
 }
 
 #ideaCatcher {
@@ -39,6 +52,36 @@ h2 {
   outline: none;
   color: #979797;
 }
+
+.resultContainer {
+  list-style: none;
+  width: 100%;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.listItemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff90;
+  margin: 6px 0 6px 0;
+}
+
+.listItem {
+  padding: 20px;
+  margin: 4px 0 4px 1px;
+  width: 80%;
+}
+
+.deleteBtn {
+  color: #196054;
+  background-color: #ffffff60;
+  border-radius: 10%;
+  border: none;
+  padding: 10px;
+} 
 
 #button {
   color: #ffffff;
