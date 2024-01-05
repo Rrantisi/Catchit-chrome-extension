@@ -1,10 +1,16 @@
+html {
+  border: 2px solid #ffffff;
+}
+
 body {
-  background-color: #dcdcdc;
-  width: 400px;
+  background-color: #ebe7e7;
+  width: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  border-radius: 20%;
 }
 
 #ideaContainer {
@@ -18,7 +24,7 @@ body {
 }
 
 h2 {
-  color: #676767;
+  color: #196054;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -31,11 +37,12 @@ h2 {
   border-radius: 2px;
   border: none;
   outline: none;
-  color: #676767;
+  color: #979797;
 }
 
 #button {
-  color: #676767;
+  color: #ffffff;
+  background-color: #196054;
   padding: 10px;
   font-size: 12px;
   border-radius: 10px;
