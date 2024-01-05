@@ -6,17 +6,27 @@
 
 body {
   background: linear-gradient(
-        -135deg,
-        #ebe9e9 ,
-        #ffffff 
-    );
+    -135deg,
+    #ebe9e9 ,
+    #ffffff 
+  );
   width: 80vh;
-  height: 100vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 8px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  color: #196054;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 12px 0 10px 0;
 }
 
 #ideaContainer {
@@ -29,15 +39,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 0.8vmin;
-}
-
-h2 {
-  color: #196054;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: 10px;
-  margin-bottom: 14px;
+  margin-top: 20px ;
 }
 
 #ideaCatcher {
@@ -53,7 +55,7 @@ h2 {
 .resultContainer {
   list-style: none;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 25px;
   background-color: transparent;
 }
 
@@ -73,6 +75,10 @@ h2 {
   margin: 4px 0 4px 1px;
   width: 80%;
   color: #196054;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .deleteBtn {
@@ -81,6 +87,7 @@ h2 {
   border-radius: 10%;
   border: none;
   padding: 10px;
+  cursor: pointer;
 } 
 
 #button {
@@ -93,6 +100,7 @@ h2 {
   width: 20%;
   font-weight: 600;
   transition: background-color 0.8s ease;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #button:hover{
