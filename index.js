@@ -39,7 +39,7 @@ const displayIdeas = async () => {
 
     // Creates delete button element for each list item
     const delButton = document.createElement('button');
-    delButton.innerHTML = 'X';
+    delButton.innerHTML = '<i class="fa-solid fa-eraser"></i>';
     delButton.className = 'deleteBtn';
     delButton.addEventListener('click', () => deleteIdea(idea, index));
 
@@ -54,11 +54,17 @@ const displayIdeas = async () => {
 
 // Handle delete idea
 const deleteIdea = (idea, index) => {
-  if(allIdeas.includes(idea)){
-    allIdeas.splice(index, 1);
+  const result = confirm(`Are you sure you want to delete ${idea}?`)
+  if(result){
+    if (allIdeas.includes(idea)){
+      allIdeas.splice(index, 1);
+    }
+    chrome.storage.local.set({ allIdeas }, displayIdeas)
+  } else {
+    return;
   }
-  chrome.storage.local.set({ allIdeas }, displayIdeas)
-}
+}  
+
 
 fetchExistingIdeas();
 
