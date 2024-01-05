@@ -15,7 +15,8 @@ const fetchExistingIdeas = async() => {
 // Handle saving new ideas in allIdeas array
 const saveIdea = () => {
   allIdeas.push(ideaCatcher.value);
-  chrome.storage.local.set({ allIdeas }, displayIdeas)
+  chrome.storage.local.set({ allIdeas }, displayIdeas);
+  ideaCatcher.value = '';
 }
 
 // Handle DOM manipulation to display ideas
